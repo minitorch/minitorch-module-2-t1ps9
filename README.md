@@ -7,6 +7,7 @@ To access the autograder:
 * Module 0: https://classroom.github.com/a/qDYKZff9
 
   Module 0:
+
   All implementation in master branch
   
   1. Switch branch
@@ -17,8 +18,8 @@ To access the autograder:
   
   2. Change path
      ```
-    export PYTHONPATH="${PYTHONPATH}:$(pwd)"
-      ```
+      export PYTHONPATH="${PYTHONPATH}:$(pwd)"
+    ```
   3. Run
       ```
     streamlit run project/app.py -- 0
