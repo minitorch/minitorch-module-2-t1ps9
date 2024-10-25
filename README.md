@@ -10,18 +10,18 @@ To access the autograder:
 
   All implementation in master branch
   
-  1. Switch branch
+  * Switch branch
     ```
     master
     ```
   To run streamlit:
   
-  2. Change path
+  * Change path
      ```
      export PYTHONPATH="${PYTHONPATH}:$(pwd)"
      ```
      
-  3. Run
+  * Run
     ```
     streamlit run project/app.py -- 0
     ```
