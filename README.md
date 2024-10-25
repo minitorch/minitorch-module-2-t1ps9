@@ -8,11 +8,11 @@ To access the autograder:
 
   Module 0:
 
-  All implementation in master branch
+  All implementation in main branch
   
   * Switch branch
     ```
-    master
+    main
     ```
   To run streamlit:
   
