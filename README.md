@@ -7,11 +7,14 @@ To access the autograder:
 * Module 0: https://classroom.github.com/a/qDYKZff9
 
   Module 0:
-
+  All implementation in master branch
+  
   1. Switch branch
-  ```
+    ```
     master
-  ```
+    ```
+  To run streamlit:
+  
   2. Change path
      ```
     export PYTHONPATH="${PYTHONPATH}:$(pwd)"
