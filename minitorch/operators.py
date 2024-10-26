@@ -27,17 +27,17 @@ def add(x: float, y: float) -> float:
 
 def neg(x: float) -> float:
     "$f(x) = -x$"
-    return -x
+    return -1.0 * x
 
 
 def lt(x: float, y: float) -> float:
     "$f(x) =$ 1.0 if x is less than y else 0.0"
-    return x < y
+    return float(x < y)
 
 
 def eq(x: float, y: float) -> float:
     "$f(x) =$ 1.0 if x is equal to y else 0.0"
-    return x == y
+    return float(x == y)
 
 
 def max(x: float, y: float) -> float:
@@ -47,7 +47,7 @@ def max(x: float, y: float) -> float:
 
 def is_close(x: float, y: float) -> float:
     "$f(x) = |x - y| < 1e-2$"
-    return abs(x - y) < 1e-2
+    return float(abs(x - y) < 1e-2)
 
 
 def sigmoid(x: float) -> float:
@@ -74,7 +74,7 @@ def relu(x: float) -> float:
 
     (See https://en.wikipedia.org/wiki/Rectifier_(neural_networks) .)
     """
-    return x if x > 0 else 0
+    return float(x) if x > 0 else 0.0
 
 
 EPS = 1e-6
@@ -107,7 +107,7 @@ def inv_back(x: float, d: float) -> float:
 
 def relu_back(x: float, d: float) -> float:
     r"If $f = relu$ compute $d \times f'(x)$"
-    return d if x > 0 else 0
+    return d if x > 0 else 0.0
 
 
 # ## Task 0.3
