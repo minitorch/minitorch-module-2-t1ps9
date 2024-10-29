@@ -72,19 +72,19 @@ def topological_sort(variable: Variable) -> Iterable[Variable]:
         Non-constant Variables in topological order starting from the right.
     """
     visited = set()
-    ordered_nodes = deque()
+    order = []
 
-    def bypass(node: Variable):
-        if node.unique_id not in visited:
-            visited.add(node.unique_id)
-            if not node.is_constant():
-                if not node.is_leaf():
-                    for parent_node in node.history.inputs:
-                        bypass(parent_node)
-            ordered_nodes.appendleft(node)
+    def dfs(node: Variable):
+        if node.unique_id in visited or node.is_constant():
+            return
+        visited.add(node.unique_id)
+        if node.history is not None:
+            for input_node in node.parents:
+                dfs(input_node)
+        order.append(node)
 
-    bypass(variable)
-    return ordered_nodes
+    dfs(variable)
+    return reversed(order)
 
 
 def backpropagate(variable: Variable, deriv: Any) -> None:

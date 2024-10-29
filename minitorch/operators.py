@@ -102,7 +102,7 @@ def inv(x: float) -> float:
 
 def inv_back(x: float, d: float) -> float:
     r"If $f(x) = 1/x$ compute $d \times f'(x)$"
-    return d / x**2
+    return -1.0 * d / x**2
 
 
 def relu_back(x: float, d: float) -> float:

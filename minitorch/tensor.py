@@ -204,8 +204,7 @@ class Tensor:
 
     def item(self) -> float:
         assert self.size == 1
-        x: float = self._tensor._storage[0]
-        return x
+        return self[0]
 
     def sum(self, dim: Optional[int] = None) -> Tensor:
         "Compute the sum over dimension `dim`"
